@@ -1,0 +1,223 @@
+@import '../../node_modules/normalize.css/normalize.css';
+
+// FONTS
+@import './fonts.scss';
+
+// VARIABLES
+$white: #ffffff;
+$textMark: #D6AF76;
+$akcent: #E4B564;
+
+@import './mixin.scss';
+
+// INITIAL
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+header {
+  background: url("../assets/images/bg.jpg") no-repeat;
+  background-size: cover;
+}
+
+.header {
+  @include md-grid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 37px;
+}
+
+.side__services {
+  padding-top: 154px;
+
+  img {
+    width: 504px;
+    height: 77px;
+    display: block;
+  }
+}
+
+.services {
+  padding: 40px 0 61px 0;
+}
+
+.services__list { 
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.services__list-item {
+  display: flex;
+  align-items: center; 
+  width: 257px;
+
+  svg {
+    margin-right: 21px;
+  }
+
+  span {
+    font-family: 'Circe-Regular'; 
+    font-size: 18px;
+    color: $white;
+  }
+}
+
+.headerMenu__link {
+  display: inline-block;
+  height: 15px;
+}
+
+.headerMenu__burger {
+  width: 20px;
+  border-bottom: 2px solid $white;
+  display: block;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 12px;
+    width: 20px;
+    height: 2px;
+    background: $white;
+  }
+  
+  &::after  {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    width: 20px;
+    height: 2px;
+    background: $white;
+  }
+}
+
+.contact__phone {
+  font-family: 'Circe-Bold';
+  font-size: 20px;
+  font-weight: 700;
+  color: $white;
+  padding-right: 35px;
+}
+
+.mark {
+  color: $textMark;
+  padding-right: 0px;
+}
+
+.contact__btn {
+  color: $akcent;
+  font-size: 18px;
+  font-family: 'Circe-Regular'; 
+  border: 1px solid $akcent;
+  padding: 10px 25px 10px 42px;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    background: url("../assets/images/icons/phone.svg") no-repeat;
+    width: 16px;
+    height: 16px;
+    left: 17px;
+    top: 15px;
+  }
+}
+
+.visualy__hiden {
+  display: none;
+}
+
+.work {
+  @include md-grid;
+  padding-bottom: 224px;
+}
+
+.work__title {
+  color: $white;
+  font-family: 'Gilam-Bold';
+  font-size: 24px;
+}
+
+.work__list-item {
+  display: flex;
+  align-items: center;
+  color: $white;
+  font-family: 'Gilam-Book';
+  line-height: 30px;
+  font-size: 19px;
+
+  &-mark {
+    width: 14px;
+    height: 2px;
+    background: $white;
+    display: inline-block;
+    margin-right: 10px;
+  }
+}
+
+.side {
+  display: flex;
+  justify-content: space-between;
+  @include md-grid;
+
+  .side__wrapper {
+    width: 65%;
+  }
+}
+
+// SLIDER
+
+.slider {
+  width: 47%;
+  position: relative;
+  top: 14rem;
+}
+
+.splide--ttb > .splide__pagination {
+  transform: translateX(60px);
+}
+
+.splide--ttb > .splide__pagination {
+
+}
+
+.splide__pagination {
+  li {
+    line-height: 2;
+  }
+}
+
+.splide__pagination__page .is-active {
+    background: $akcent;
+}
+
+.splide__pagination__page {
+  border-radius: 0;
+}
+
+
+
+
+
+
+
+
+
+
+// FILES
+
+@import 'components/main';
+@import 'components/logo';
+
+
+
+

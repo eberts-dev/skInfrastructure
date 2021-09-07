@@ -1,0 +1,7 @@
+// grid
+$desctop-width: 1465px;
+
+@mixin md-grid {
+  width: $desctop-width;
+  margin: 0 auto;
+}
