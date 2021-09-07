@@ -196,13 +196,20 @@ header {
   }
 }
 
-.splide__pagination__page .is-active {
+.splide__pagination__page {
+  background: $white;
+  opacity: 1;
+}
+
+.splide__pagination__page.is-active {
     background: $akcent;
+    opacity: 1;
 }
 
 .splide__pagination__page {
   border-radius: 0;
 }
+
 
 
 
