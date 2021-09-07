@@ -222,26 +222,47 @@ header {
 .principles__title {
   color: $white;
   font-size: 50px;
-  font-family: 'Gilam-Bold'; 
+  font-family: 'Gilam-Bold';
+  padding-bottom: 83px;
 }
 
 .principles__list-item {
   display: flex;
+  align-items: center;
+  padding-bottom: 61px;
 }
 
 .principles__list-wrapper {
+  margin-left: 36px;
   .principles__name {
     color: $white;
     font-family: 'Circe-Bold';
+    font-size: 23px;
+    padding-bottom: 17px;
 
     &-item {
       color: $white;
       font-family: 'Circe-Regular'; 
+      font-size: 17px;
+      line-height: 25px;
     }
   }
 }
 
+.wrapper {
+  display: flex;
+}
 
+.machinery__image {
+    width: 730px;
+    height: 795px;
+}
+
+.splide {
+  width: 100%;
+  max-width: 490px;
+  margin: 0 auto;
+} 
 
 // FILES
 
