@@ -7,6 +7,7 @@
 $white: #ffffff;
 $textMark: #D6AF76;
 $akcent: #E4B564;
+$background-dark: #171717;
 
 @import './mixin.scss';
 
@@ -14,6 +15,10 @@ $akcent: #E4B564;
 
 a {
   text-decoration: none;
+}
+
+p, h2 {
+  margin: 0;
 }
 
 ul {
@@ -186,10 +191,6 @@ header {
   transform: translateX(60px);
 }
 
-.splide--ttb > .splide__pagination {
-
-}
-
 .splide__pagination {
   li {
     line-height: 2;
@@ -210,13 +211,35 @@ header {
   border-radius: 0;
 }
 
+.grid-md {
+  @include md-grid;
+}
 
+.section-bg {
+  background: $background-dark;
+}
 
+.principles__title {
+  color: $white;
+  font-size: 50px;
+  font-family: 'Gilam-Bold'; 
+}
 
+.principles__list-item {
+  display: flex;
+}
 
+.principles__list-wrapper {
+  .principles__name {
+    color: $white;
+    font-family: 'Circe-Bold';
 
-
-
+    &-item {
+      color: $white;
+      font-family: 'Circe-Regular'; 
+    }
+  }
+}
 
 
 
