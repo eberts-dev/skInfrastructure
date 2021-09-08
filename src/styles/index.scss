@@ -8,6 +8,7 @@ $white: #ffffff;
 $textMark: #D6AF76;
 $akcent: #E4B564;
 $background-dark: #171717;
+$background-darknes: #202020;
 
 @import './mixin.scss';
 
@@ -197,9 +198,68 @@ header {
   }
 }
 
+#two .splide__pagination {
+  width: auto;
+  top: 74%;
+  right: 129px;
+  left: auto;
+  bottom: 17em;
+  transform: translateX(0%);
+
+  li {
+    margin-right: 22px;
+
+    .splide__pagination__page {
+      border-radius: 50%;
+    }
+  }
+}
+
 .splide__pagination__page {
   background: $white;
   opacity: 1;
+}
+
+#two .splide__arrow {
+  top: 76%;
+  right: 26px;
+  left: auto;
+  border-radius: 0;
+  width: 40px;
+  height: 40px;
+  border: 1px solid $akcent;
+  background: transparent;
+  opacity: 1;
+
+  svg {
+    fill: $akcent;
+    width: 14px;
+    height: 14px;
+  }
+
+  &--prev {
+    margin-right: 55px;
+
+    &:hover {
+      background: $akcent;
+
+      svg {
+        fill: $white;
+      }
+    }
+
+  }
+
+  &--next {
+    &:hover {
+      background: $akcent;
+
+      svg {
+        fill: $white;
+      }
+    }
+  }
+
 }
 
 .splide__pagination__page.is-active {
@@ -215,8 +275,10 @@ header {
   @include md-grid;
 }
 
-.section-bg {
+.principles-bg {
   background: $background-dark;
+  padding-top: 127px;
+  padding-bottom: 61px;
 }
 
 .principles__title {
@@ -251,6 +313,7 @@ header {
 
 .wrapper {
   display: flex;
+  justify-content: space-between;
 }
 
 .machinery__image {
@@ -258,6 +321,50 @@ header {
     height: 795px;
 }
 
+.machinery__discription {
+  display: block;
+  padding: 0 42px;
+  background: $background-darknes;
+  position: absolute;
+  top: 60%;
+  right: 0;
+  bottom: 250px;
+  height: 172px;
+
+  &-title {
+    font-size: 20px;
+    font-family: 'Circe-Bold'; 
+    color: $white;
+    padding-top: 31px;
+    padding-bottom: 12px;
+  }
+
+  &-subtitle {
+    font-size: 16px;
+    font-family: 'Circe-Light';
+    color: $white;
+    padding-bottom: 22px;
+  }
+}
+
+.principles__link {
+  display: block;
+  width: 257px;
+  border: 1px solid $akcent;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 18px;
+  color: $akcent;
+  font-family: 'Circe-Regular';
+  margin-left: 112px;
+
+
+  &:hover {
+    background: $akcent;
+    transition: .2s;
+    color: $background-dark;
+  }
+}
 
 
 // FILES
