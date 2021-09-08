@@ -1,6 +1,12 @@
 // grid
 $desctop-width: 1465px;
 
+@mixin desctop-title {
+  color: $white;
+  font-size: 50px;
+  font-family: 'Gilam-Bold';
+}
+
 @mixin md-grid {
   width: $desctop-width;
   margin: 0 auto;

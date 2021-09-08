@@ -9,6 +9,9 @@ $textMark: #D6AF76;
 $akcent: #E4B564;
 $background-dark: #171717;
 $background-darknes: #202020;
+$background-black: #0E0E0E;
+$background-black-hover: rgba(14, 14, 14, 0.71);
+$background-akcent-hover: rgba(177, 128, 55, 0.8);
 
 @import './mixin.scss';
 
@@ -33,12 +36,24 @@ header {
   background-size: cover;
 }
 
+.title {
+  @include desctop-title;
+}
+
 .header {
   @include md-grid;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 37px;
+}
+
+.btn {
+  border: 1px solid $akcent;
+  padding: 10px 0;
+  color: $akcent;
+  display: inline-block;
+  text-align: center;
 }
 
 .side__services {
@@ -365,6 +380,122 @@ header {
     color: $background-dark;
   }
 }
+
+
+// PRODUCT 
+
+.product {
+  background: $background-black;
+
+  &__wrapper {
+    @include md-grid;
+    padding-top: 171px;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 71px;
+  }
+}
+
+.product__more {
+  width: 180px;
+}
+
+.product__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product__list-item {
+  width: 487px;
+  height: 391px;
+  position: relative;
+
+  &:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: $background-black-hover;
+  }
+  
+  &:nth-child(1) {
+    background: url(../assets/images/product/1.jpg) no-repeat;
+  }
+
+  &:nth-child(2) {
+    background: url(../assets/images/product/2.jpg) no-repeat;
+  }
+
+  &:nth-child(3) {
+    background: url(../assets/images/product/3.jpg) no-repeat;
+  }
+
+  &:nth-child(4) {
+    background: url(../assets/images/product/4.jpg) no-repeat;
+  }
+
+  &:nth-child(5) {
+    background: url(../assets/images/product/5.jpg) no-repeat;
+  }
+
+  &:nth-child(6) {
+    background: url(../assets/images/product/6.jpg) no-repeat;
+  }
+
+    &:hover {
+      background: $background-akcent-hover;
+
+      &:before {
+        opacity: 0;
+      }
+    }
+}
+
+.product__company {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  top: 50%;
+
+  &-description {
+    display: block;
+    font-family: 'Gilam-Bold';
+    font-size: 22px;
+    color: $white;
+    width: 326px;
+    margin: 0 auto;
+  }
+}
+
+.product__adress-title {
+  display: block;
+}
+
+.product__adress {
+  display: block;
+}
+
+.product__logo {
+  width: 39%;
+  margin: 0 auto;
+}
+
+
+
+// .product__image {
+//   width: 487px;
+//   height: 391px;
+//   font-size: 0;
+//   background: $background-black;
+//   opacity: 0.6;
+//   position: relative;
+// }
 
 
 // FILES
