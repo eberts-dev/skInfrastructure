@@ -42,6 +42,8 @@ fieldset {
 header {
   background: url("../assets/images/bg.jpg") no-repeat;
   background-size: cover;
+  background-position: 100%;
+
 }
 
 .title {
@@ -49,11 +51,27 @@ header {
 }
 
 .header {
-  @include md-grid;
+  @include xl-grid;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 37px;
+
+  @include media("max", "xl") {
+    @include lg-grid;
+  }
+
+  @include media("max", "lg") {
+    @include md-grid;
+  }
+
+  @include media("max", "md") {
+    @include sm-grid;
+  }
+
+  @include media("max", "sm") {
+    @include xm-grid;
+  }
 }
 
 .btn {
@@ -64,8 +82,42 @@ header {
   text-align: center;
 }
 
+.side {
+  display: flex;
+  justify-content: space-between;
+  @include xl-grid;
+
+  @include media("max", "xl") {
+    @include lg-grid;
+  }
+
+  @include media("max", "lg") {
+    @include md-grid;
+  }
+
+  @include media("max", "md") {
+    @include sm-grid;
+  }
+
+  @include media("max", "sm") {
+    @include xm-grid;
+  }
+
+  .side__wrapper {
+    width: 65%;
+
+    @include media("max", "md") {
+      width: 100%;
+    }
+  }
+}
+
 .side__services {
   padding-top: 154px;
+
+  @include media("max", "sm") {
+    padding-top: 63px;
+  }
 
   img {
     width: 504px;
@@ -87,6 +139,14 @@ header {
   display: flex;
   align-items: center; 
   width: 257px;
+
+  @include media("max", "lg") {
+    width: 460px;
+  }
+
+  @include media("max", "md") {
+    width: 350px;
+  }
 
   svg {
     margin-right: 21px;
@@ -166,14 +226,19 @@ header {
 }
 
 .work {
-  @include md-grid;
+  // @include xl-grid;
   padding-bottom: 224px;
+
+  @include media("max", "sm") {
+    padding-bottom: 60px;
+  }
 }
 
 .work__title {
   color: $white;
   font-family: 'Gilam-Bold';
   font-size: 24px;
+  padding-bottom: 24px;
 }
 
 .work__list-item {
@@ -193,31 +258,29 @@ header {
   }
 }
 
-.side {
-  display: flex;
-  justify-content: space-between;
-  @include md-grid;
-
-  .side__wrapper {
-    width: 65%;
-  }
-}
-
 // SLIDER
 
 .slider {
   width: 47%;
   position: relative;
   top: 14rem;
+
+  @include media("max", "md") {
+    display: none;
+  }
+
 }
 
 .splide--ttb > .splide__pagination {
   transform: translateX(60px);
 }
 
-.splide__pagination {
+.splide--ttb > .splide__pagination {
   li {
     line-height: 2;
+  }
+  @include media("max", "xl") {
+    right: 4rem;
   }
 }
 
@@ -228,6 +291,16 @@ header {
   left: auto;
   bottom: 17em;
   transform: translateX(0%);
+
+  @include media("max", "md") {
+    top: 80%;
+  }
+
+  @include media("max", "sm") {
+    left: 40px;
+    right: auto;
+    top: 93%;
+  }
 
   li {
     margin-right: 22px;
@@ -253,6 +326,14 @@ header {
   border: 1px solid $akcent;
   background: transparent;
   opacity: 1;
+
+  @include media("max", "md") {
+    top: 81%;
+  }
+
+  @include media("max", "sm") {
+    top: 94%;
+  }
 
   svg {
     fill: $akcent;
@@ -294,14 +375,35 @@ header {
   border-radius: 0;
 }
 
-.grid-md {
-  @include md-grid;
+.principles {
+  background: $background-dark;
 }
 
-.principles-bg {
-  background: $background-dark;
+.principles__container{
+  @include xl-grid;
+  display: flex;
+  justify-content: space-between;
   padding-top: 127px;
   padding-bottom: 61px;
+
+  @include media("max", "xl") {
+    @include lg-grid;
+  }
+
+  @include media("max", "lg") {
+    @include md-grid;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @include media("max", "md") {
+    @include sm-grid;
+  }
+
+  @include media("max", "sm") {
+    @include xm-grid;
+    padding-top: 65px;
+  }
 }
 
 .principles__title {
@@ -327,7 +429,7 @@ header {
 
     &-item {
       color: $white;
-      font-family: 'Circe-Regular'; 
+      font-family: 'Circe-Regular';
       font-size: 17px;
       line-height: 25px;
     }
@@ -339,9 +441,33 @@ header {
   justify-content: space-between;
 }
 
+.col-right {
+  @include media("max", "lg") {
+    margin: 0 auto;
+    width: 80%;
+  } 
+
+  @include media("max", "sm") {
+    margin: 0;
+    width: 100%;
+  } 
+
+}
+
+.machinery {
+  @include media("max", "lg") {
+    padding-top: 61px;
+  } 
+}
+
 .machinery__image {
     width: 730px;
     height: 795px;
+
+    @include media("max", "md") {
+      width: 100%;
+      height: auto;
+    } 
 }
 
 .machinery__discription {
@@ -353,6 +479,12 @@ header {
   right: 0;
   bottom: 250px;
   height: 172px;
+
+  @include media("max", "sm") {
+    position: sticky;
+    left: 0;
+    margin-top: -62px;
+  } 
 
   &-title {
     font-size: 20px;
@@ -381,6 +513,10 @@ header {
   font-family: 'Circe-Regular';
   margin-left: 112px;
 
+  @include media("max", "sm") {
+    margin-left: 0;
+    width: 100%;
+  } 
 
   &:hover {
     background: $akcent;
@@ -396,27 +532,62 @@ header {
   background: $background-black;
 
   &__wrapper {
-    @include md-grid;
+    @include xl-grid;
     padding-top: 171px;
+
+    @include media("max", "xl") {
+      @include lg-grid;
+    }
+
+    @include media("max", "lg") {
+      @include md-grid;
+    }
+
+    @include media("max", "md") {
+      @include sm-grid;
+    }
   }
 
   &__header {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
-    padding-bottom: 71px;
+
+    @include media("max", "lg") {
+      @include md-grid;
+    }
   }
 }
 
 .product__company-wrapper {
   display: none;
   padding-top: 16px;
+
+  @include media("max", "sm") {
+    display: block;
+  }
+
+} 
+
+.product__title {
+  order: 1;
+
+  @include media("max", "lg") {
+    justify-content: center;
+  }
 }
 
 .product__more {
   width: 180px;
   font-family: 'Circe-Regular'; 
   color: $akcent;
+  order: 2;
+  padding: 18px 0;
+
+  @include media("max", "lg") {
+    order: 3;
+  }
 
   &:hover {
     background: $akcent;
@@ -428,6 +599,13 @@ header {
 .product__list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  order: 3;
+  padding-top: 73px;
+
+  @include media("max", "lg") {
+    order: 2;
+  }
 }
 
 .product__list-item {
@@ -485,16 +663,6 @@ header {
   }
 }
 
-
-
-//   &:hover {
-//     background: $background-akcent-hover;
-
-//     &:before {
-//       opacity: 0;
-//     }
-//   }
-
 .product__company {
   display: flex;
   flex-direction: column;
@@ -520,6 +688,10 @@ header {
   color: $white;
   width: 245px;
   margin: 0 auto;
+
+  @include media("max", "sm") {
+    display: none;
+  } 
 }
 
 .product__logo {
@@ -542,6 +714,11 @@ header {
     height: 100%;
     top: 0;
     right: 0;
+    z-index: 0;
+
+    @include media("max", "xl") {
+      width: 40%;
+    }
   }
 
   &__contacts {
@@ -565,7 +742,24 @@ header {
 
   &__wrapper {
     padding-top: 150px;
-    @include md-grid
+    @include xl-grid;
+
+    @include media("max", "xl") {
+      @include lg-grid;
+    }
+
+    @include media("max", "lg") {
+      @include md-grid;
+    }
+
+    @include media("max", "md") {
+      @include sm-grid;
+    }
+
+    @include media("max", "sm") {
+      @include xm-grid;
+      padding-top: 45px;
+    }
   }
 
   &__contacts-title {
@@ -643,7 +837,10 @@ header {
 
 
 .form {
+  z-index: 1;
+  position: relative;
 
+  
   &__header {
     padding-bottom: 45px;
   }
@@ -651,8 +848,14 @@ header {
   &__wrapper {
     max-width: 713px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding-bottom: 36px;
+
+    @include media("max", "sm") {
+      padding-bottom: 0;
+    }
+
   }
 
   &__title {
@@ -666,7 +869,14 @@ header {
     display: flex;
     flex-wrap: wrap;
     max-width: 339px;
+    order: 1;
     position: relative;
+
+    @include media("max", "sm") {
+      max-width: 100%;
+      width: 100%;
+      padding-bottom: 20px;
+    }
   }
 
   &__description {
@@ -696,7 +906,6 @@ header {
     border-color: transparent;
     outline-color: $akcent;
     
-    
     &:focus {
       background: $akcent;
       border-color: $akcent;
@@ -717,6 +926,11 @@ header {
       color: $white;
       font-size: 14px;
     }
+
+    @include media("max", "sm") {
+      width: 100%;
+    }
+
   }
 
   &__button {
@@ -745,6 +959,11 @@ header {
       background: $akcent;
       color: $background-dark;
       transition: .3s;
+
+      @include media("max", "sm") {
+        width: 100%;
+      }
+  
 
       // .form__file-marker + use path#lform__Icon {
       //   fill: $background-dark;
@@ -776,12 +995,28 @@ input[type=file]:focus + .form__file-label {
   width: 339px;
   background: inherit;
   font-family: 'Gilam-SemiBold'; 
+  order: 2;
+
+  @include media("max", "sm") {
+    order: 3;
+    width: 100%;
+  }
 
   &:hover {
     color: $background-dark;
     background: $akcent;
     transition: .3s;
     cursor: pointer;
+  }
+}
+
+.form__succes {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  order: 3;
+  @include media("max", "md") {
+    order: 2;
+    padding-top: 0;
   }
 }
 
