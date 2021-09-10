@@ -1,5 +1,30 @@
 // grid
-$desctop-width: 1465px;
+$xl-width: 1465px;
+$lg-width: 1200px;
+$md-width: 940px;
+$sm-width: 740px;
+$xm-width: 568px;
+
+// media
+$sizes: ("xs":320px, "xm":$xm-width, "sm":$sm-width, "md":$md-width, "lg":$lg-width, "xl":1640px);
+
+@mixin media($minmax, $media) {
+  @each $size, $resolution in $sizes {
+    @if $media == $size {
+      @media only screen and (#{$minmax}-width: $resolution) {
+        @content;
+      }
+    }
+  }
+}
+
+
+// @include media("max", "md") {
+  
+// }
+
+
+// INITIAL
 
 @mixin desctop-title {
   color: $white;
@@ -7,7 +32,24 @@ $desctop-width: 1465px;
   font-family: 'Gilam-Bold';
 }
 
-@mixin md-grid {
-  width: $desctop-width;
+@mixin xl-grid {
+  width: $xl-width;
   margin: 0 auto;
+}
+
+@mixin lg-grid {
+  width: $lg-width;
+}
+
+@mixin md-grid {
+  width: $md-width;
+  margin: 0 auto;
+}
+
+@mixin sm-grid {
+  width: $sm-width;
+}
+
+@mixin xm-grid {
+  width: $xm-width;
 }
