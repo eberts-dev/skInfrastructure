@@ -1,13 +1,15 @@
 // grid
+$xxl-width: 1640px;
 $xl-width: 1465px;
 $lg-width: 1200px;
 $md-width: 940px;
 $sm-width: 740px;
 $xm-width: 568px;
-$xs-width: 414px;
+$xs-width: 390px;
+$vs-width: 320px;
 
 // media
-$sizes: ("xs":$xs-width, "xm":$xm-width, "sm":$sm-width, "md":$md-width, "lg":$lg-width, "xl":1640px);
+$sizes: ("vs":$vs-width, "xs":$xs-width, "xm":$xm-width, "sm":$sm-width, "md":$md-width, "lg":$lg-width, "xl":$xxl-width);
 
 @mixin media($minmax, $media) {
   @each $size, $resolution in $sizes {
@@ -20,9 +22,7 @@ $sizes: ("xs":$xs-width, "xm":$xm-width, "sm":$sm-width, "md":$md-width, "lg":$l
 }
 
 
-// @include media("max", "md") {
-  
-// }
+// @include media("max", "md") {}
 
 
 // INITIAL
@@ -53,4 +53,12 @@ $sizes: ("xs":$xs-width, "xm":$xm-width, "sm":$sm-width, "md":$md-width, "lg":$l
 
 @mixin xm-grid {
   width: $xm-width;
+}
+
+@mixin xs-grid {
+  width: $xs-width;
+}
+
+@mixin vs-grid {
+  width: 270px;
 }
