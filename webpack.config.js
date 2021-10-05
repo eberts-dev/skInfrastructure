@@ -88,6 +88,13 @@ const plugins = () => {
                 collapseWhitespace: isProduction
             }
         }),
+        new HTMLWebpackPlugin({
+            filename: 'contact.html',
+            template: './contact.html',
+            minify: {
+                collapseWhitespace: isProduction
+            }
+        }),
         new CleanWebpackPlugin(),
         new CopyWebpackPlugin([
             {
@@ -120,7 +127,7 @@ module.exports = {
     },
     output: {
         filename: filename('js'),
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname + '/dist')
     },
     resolve: {
         extensions: ['.js', '.json', '.png'],
