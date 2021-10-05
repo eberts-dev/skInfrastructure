@@ -214,7 +214,7 @@ fieldset {
   }
 }
 
-.contact__phone {
+.header-contact__phone {
   font-family: 'Circe-Bold';
   font-size: 20px;
   font-weight: 700;
@@ -256,7 +256,7 @@ fieldset {
   }
 }
 
-.contact__btn {
+.header-contact__btn {
   display: inline-block;
   color: $akcent;
   font-size: 18px;
@@ -931,6 +931,7 @@ fieldset {
 
   }
 }
+
 .footer__contacts {
   max-width: 519px;
   padding-bottom: 85px;
