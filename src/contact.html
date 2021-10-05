@@ -1,12 +1,12 @@
 <!doctype html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="favicon.ico" type="image/ico">
-    <title>SK project / Контакты</title>
+<meta charset="UTF-8">
+<meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="icon" href="favicon.ico" type="image/ico">
+<title>SK project / Контакты</title>
 </head>
 <body>
     <header class="contact-page">
@@ -22,20 +22,83 @@
                 </nav>
                 <img src="../src/assets/images/main-logo.png" alt="Ск инфраструкрура">
             </div>
-            <div class="contact">
-            <a class="contact__phone" href="tel:+78124016495">
-              <span class="contact__phone mark">+7 (812)</span> 401-64-95
+            <div class="header-contact">
+            <a class="header-contact__phone" href="tel:+78124016495">
+                <span class="header-contact__phone mark">+7 (812)</span> 401-64-95
             </a>
-            <a class="contact__btn" href="#">Обратный звонок</a>
-          </div>
-        </div>
-    
-        <div class="side side-contact">
-          <div class="side__wrapper">
-            <div class="crumbs">
-                <a href="index.html" class="crumbs__main">Главная</a> <span>/ Контакты</span>
+            <a class="header-contact__btn" href="#">Обратный звонок</a>
             </div>
-          </div>
+        </div>
+
+        <div class="side side-contact">
+            <div class="side__wrapper">
+                <div class="crumbs">
+                    <a href="index.html" class="crumbs__main">Главная</a> <span>/ Контакты</span>
+                </div>
+                <div class="title">Контакты</div>
+
+                
+                <div class="contact">
+                    <p class="contact-title">Офис в Санкт-Петербурге:</p>
+                    <ul class="contacts">
+                        <li class="contacts__item">
+                            <a class="contacts__item-link" href="tel:+78124382635">+7 (812) 438-26-35</a> 
+                        <li>
+                        <li class="contacts__item">
+                            <a class="contacts__item-mail" href="mailto:info@skinfra.ru">info@skinfra.ru</a>
+                        </li>
+                        <li class="contacts__item">
+                            <span class="contacts__item-addres">
+                            195197, Санкт-Петербург, Кондратьевский пр., д. 15, к. 2, л. З, офис 204 БЦ "Фернан Леже"
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <form action="#" class="form">
+                    <div class="form__header">
+                    <h2 class="form__title">Свяжитесь с нами</h2>
+                    <div class="form__description">Задайте вопрос, пришлите коммерческое предложение или пригласите на тендер</div>
+                    </div>
+                    <div class="form__data">
+                    <fieldset>
+                        <div class="form__wrapper">
+                        <p class="form__item">
+                            <label class="form__data-label" for="name">Представьтесь, пожалуйста<sup>*</sup></label>
+                            <input class="form__data-name" id="name" name="name" type="text" placeholder="Ваше имя">
+                        </p>
+                        <p class="form__item">
+                            <label class="form__data-label" for="phone">Ваш телефон</label>
+                            <input class="form__data-phone" id="phone" name="phone" type="number" placeholder="+7 (___) ___-__-__">
+                        </p>
+                        </div>
+                        <div class="form__wrapper">
+                        <p class="form__item">
+                            <input class="form__file" id="file" type="file" name="file" multiple>
+                            <label class="form__file-label" for="file">Прикрепить файл 
+                            <span class="form__file-marker">
+                                <svg width="16" height="16"><use xlink:href="#form__Icon"></use></svg>
+                            </span>
+                            </label>
+                        </p>
+                        <button class="btn form__button" type="submit" value="Перезвоните мне">Перезвоните мне</button>
+        
+                        <div class="form__succes">
+                            <input class="form__succes-input" type="checkbox" id="yes" name="interest" value="yes">
+                            <label  class="form__succes-label" for="yes">
+                            Я соглашаюсь с&nbsp;<a class="form__succes-link" href="#">политикой конфиденциальности</a>
+                            </label>
+                        </div>
+                        </div>
+        
+                    </fieldset>
+                    </div>
+                </form>
+
+
+            </div>
+            <div class="map-contact">
+
+            </div>
         </div>
     </header>
 </body>

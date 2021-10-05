@@ -15,7 +15,7 @@
 }
 
 .side-contact {
-  padding-top: 31px;
+  padding-top: 67px;
 }
 
 .crumbs {
@@ -23,6 +23,7 @@
   color: $crumbs;
   font-family: 'Circe-Light';
   font-size: 18px;
+  padding-bottom: 40px;
 }
 
 .crumbs__main {
@@ -30,4 +31,18 @@
   color: $crumbs;
   border-bottom: 1px solid $crumbs;
   margin-right: 5px;
+}
+
+.contact {
+  padding-top: 71px;
+  max-width: 519px;
+  padding-bottom: 85px;
+  position: relative;
+}
+
+.contact-title {
+  color: $white;
+  font-family: 'Gilam-Bold';
+  font-size: 22px;
+  padding-bottom: 30px;
 }
