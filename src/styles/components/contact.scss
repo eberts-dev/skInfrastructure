@@ -1,0 +1,33 @@
+.contact-page {
+  background-color: $background-dark;
+}
+
+.header {
+  img {
+    width: 216px;
+    padding-left: 31px;
+  }
+
+  .header__wrapper {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.side-contact {
+  padding-top: 31px;
+}
+
+.crumbs {
+  display: flex;
+  color: $crumbs;
+  font-family: 'Circe-Light';
+  font-size: 18px;
+}
+
+.crumbs__main {
+  display: inline-block;
+  color: $crumbs;
+  border-bottom: 1px solid $crumbs;
+  margin-right: 5px;
+}
