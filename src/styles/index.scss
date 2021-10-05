@@ -228,6 +228,11 @@ header {
     padding-right: 35px;
   }
 
+  @include media("max", "vs") {
+    padding-right: 70px;
+  }
+
+
 
 }
 
@@ -309,6 +314,15 @@ header {
     background: $white;
     display: inline-block;
     margin-right: 10px;
+  }
+}
+
+.principles__item {
+  &-image {
+    svg {
+      width: 65px;
+      height: 65px;
+    }
   }
 }
 
@@ -663,7 +677,7 @@ header {
   }
 
   @include media("max", "xs") {
-    width: 322px;
+    width: 270px;
   }
 
 
@@ -811,7 +825,7 @@ header {
     @include xs-grid;
 
     img {
-      width: 50%;
+      width: 35%;
     }
   }
 
@@ -847,11 +861,7 @@ header {
   }
 
   @include media("max", "sm") {
-    height: 70%;
-  }
-
-  @include media("max", "xs") {
-    height: 90%;
+    height: 100%;
   }
 }
 
@@ -869,8 +879,8 @@ header {
 }
 
 .product__adress {
-  display: none;
   &-btn {
+    display: none;
     @include media("max", "sm") {
       display: block;
       font-size: 19px;
@@ -1186,11 +1196,6 @@ header {
       @include media("max", "sm") {
         width: 100%;
       }
-  
-
-      // .form__file-marker + use path#lform__Icon {
-      //   fill: $background-dark;
-      // }
     }
 }
 
