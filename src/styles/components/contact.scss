@@ -36,13 +36,67 @@
 .contact {
   padding-top: 71px;
   max-width: 519px;
-  padding-bottom: 85px;
+  padding-bottom: 25px;
   position: relative;
 }
 
 .contact-title {
+  padding-bottom: 30px;
+}
+
+.contact-title, .tender__title  {
   color: $white;
   font-family: 'Gilam-Bold';
   font-size: 22px;
-  padding-bottom: 30px;
+}
+
+.contact__requisites  {
+  margin: 46px 0;
+}
+
+.contact__requisites, .tender__file {
+  width: 257px;
+  padding: 10px 0;
+  font-family: 'Circe-Regular'; 
+  font-size: 18px;
+  &:hover {
+    @include hover-btn;
+   }
+}
+
+.tender__file {
+  margin: 26px 0;
+}
+
+.form__data-contact-name, .form__data-contact-phone, 
+.form__data-contact-file-label {
+  background: $contact-input;
+}
+
+.form__contact-data {
+  padding-bottom: 0;
+}
+
+.map-contact {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    right: -167px;
+    left: auto;
+    background: url('/src/assets/images/map.jpg') no-repeat;
+    width: 820px;
+    height: 100%;
+    z-index: 0;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 43%;
+    left: -381px;
+    background: url('/src/assets/images/logo/logo.svg') no-repeat;
+    width: 43px;
+    height: 57px;
+    z-index: 2;
+  }
 }

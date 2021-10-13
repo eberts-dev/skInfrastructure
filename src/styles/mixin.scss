@@ -62,3 +62,12 @@ $sizes: ("vs":$vs-width, "xs":$xs-width, "xm":$xm-width, "sm":$sm-width, "md":$m
 @mixin vs-grid {
   width: 270px;
 }
+
+//styles
+
+@mixin hover-btn {
+  color: $background-dark;
+  background: $akcent;
+  transition: .3s;
+  cursor: pointer;
+}

@@ -14,10 +14,11 @@ $background-black: #0E0E0E;
 $background-black-hover: rgba(14, 14, 14, 0.6);
 $background-akcent-hover: rgba(177, 128, 55, 0.8);
 $background-footer: #232323;
-$background-input: #151515;
+$main-input: #151515;
+$contact-input: #0E0E0E;
 
 @import './mixin.scss';
-@import '../styles/components/contact.scss';
+
 
 // INITIAL
 
@@ -277,7 +278,7 @@ fieldset {
     width: 16px;
     height: 16px;
     left: 17px;
-    top: 15px;
+    top: 12px;
 
   }
 
@@ -1136,7 +1137,7 @@ fieldset {
 
 .form__data-name, .form__data-phone {
     font-family: 'Gilam-Book'; 
-    background: $background-input;
+    background: $main-input;
     color: $white;
     border: none;
     padding: 15px 25px;
@@ -1172,7 +1173,7 @@ fieldset {
   }
 
 .form__button {
-  background: $background-input;
+  background: $main-input;
 }
 
 
@@ -1320,6 +1321,7 @@ input[type=file]:focus + .form__file-label {
 
 @import 'components/main';
 @import 'components/logo';
+@import '../styles/components/contact.scss';
 
 
 
