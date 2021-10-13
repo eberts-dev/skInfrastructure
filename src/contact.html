@@ -36,8 +36,6 @@
                     <a href="index.html" class="crumbs__main">Главная</a> <span>/ Контакты</span>
                 </div>
                 <div class="title">Контакты</div>
-
-                
                 <div class="contact">
                     <p class="contact-title">Офис в Санкт-Петербурге:</p>
                     <ul class="contacts">
@@ -53,28 +51,33 @@
                             </span>
                         </li>
                     </ul>
+                    <a class="btn contact__requisites" href="#" download>Скачать реквизиты</a>
+                    <div class="tender">
+                        <p class="tender__title">Информационная карта участника тендера:</p>
+                        <a class="btn tender__file" href="#" download>Скачать, файл PDF</a>
+                    </div>
                 </div>
                 <form action="#" class="form">
                     <div class="form__header">
                     <h2 class="form__title">Свяжитесь с нами</h2>
                     <div class="form__description">Задайте вопрос, пришлите коммерческое предложение или пригласите на тендер</div>
                     </div>
-                    <div class="form__data">
+                    <div class="form__data form__contact-data">
                     <fieldset>
                         <div class="form__wrapper">
                         <p class="form__item">
                             <label class="form__data-label" for="name">Представьтесь, пожалуйста<sup>*</sup></label>
-                            <input class="form__data-name" id="name" name="name" type="text" placeholder="Ваше имя">
+                            <input class="form__data-name form__data-contact-name" id="name" name="name" type="text" placeholder="Ваше имя">
                         </p>
                         <p class="form__item">
                             <label class="form__data-label" for="phone">Ваш телефон</label>
-                            <input class="form__data-phone" id="phone" name="phone" type="number" placeholder="+7 (___) ___-__-__">
+                            <input class="form__data-phone form__data-contact-phone" id="phone" name="phone" type="number" placeholder="+7 (___) ___-__-__">
                         </p>
                         </div>
                         <div class="form__wrapper">
                         <p class="form__item">
                             <input class="form__file" id="file" type="file" name="file" multiple>
-                            <label class="form__file-label" for="file">Прикрепить файл 
+                            <label class="form__file-label form__data-contact-file-label" for="file">Прикрепить файл 
                             <span class="form__file-marker">
                                 <svg width="16" height="16"><use xlink:href="#form__Icon"></use></svg>
                             </span>
@@ -93,11 +96,9 @@
                     </fieldset>
                     </div>
                 </form>
-
-
             </div>
             <div class="map-contact">
-
+                
             </div>
         </div>
     </header>
