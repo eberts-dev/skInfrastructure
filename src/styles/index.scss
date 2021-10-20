@@ -1084,7 +1084,7 @@ fieldset {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-bottom: 36px;
+  padding-bottom: 20px;
 
   @include media("max", "sm") {
     padding-bottom: 0;
@@ -1121,6 +1121,11 @@ fieldset {
   font-family: 'Gilam-Book'; 
   font-size: 18px;
   color: $white;
+
+  @include media("max", "lg") {
+    width: 270px;
+  }
+
 }
 
 .form__data {
@@ -1319,9 +1324,10 @@ input[type=file]:focus + .form__file-label {
 
 // FILES
 
+@import '../styles/components/contact.scss';
 @import 'components/main';
 @import 'components/logo';
-@import '../styles/components/contact.scss';
+
 
 
 

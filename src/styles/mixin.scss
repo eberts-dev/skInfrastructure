@@ -9,7 +9,7 @@ $xs-width: 390px;
 $vs-width: 320px;
 
 // media
-$sizes: ("vs":$vs-width, "xs":$xs-width, "xm":$xm-width, "sm":$sm-width, "md":$md-width, "lg":$lg-width, "xl":$xxl-width);
+$sizes: ("vs":$vs-width, "xs":$xs-width, "xm":$xm-width, "sm":$sm-width, "md":$md-width, "lg":$lg-width, "xl":$xl-width, "xxl":$xxl-width);
 
 @mixin media($minmax, $media) {
   @each $size, $resolution in $sizes {
