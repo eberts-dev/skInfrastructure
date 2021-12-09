@@ -126,7 +126,7 @@ fieldset {
 
 
   .side__wrapper {
-    width: 65%;
+    width: 55%;
 
     @include media("max", "md") {
       width: 100%;
@@ -1073,6 +1073,7 @@ fieldset {
 .form {
   z-index: 1;
   position: relative;
+  margin-bottom: 49px;
 }
   
 .form__header {
@@ -1093,7 +1094,6 @@ fieldset {
   @include media("max", "xs") {
     width: 270px;
   }
-
 }
 
 .form__title {

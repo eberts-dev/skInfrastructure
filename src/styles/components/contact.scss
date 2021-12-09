@@ -101,17 +101,16 @@
   width: 50%;
   @include media("max", "md") {
     width: 100%;
-    height: 1180px;
   }
 
   &::before {
     content: '';
-    position: fixed;
+    position: absolute;
     right: 0;
     left: auto;
     background: url('/src/assets/images/map.jpg') no-repeat;
     width: 820px;
-    height: 1100px;
+    height: 1155px;
     z-index: 0;
 
     @include media("max", "xxl") {
@@ -121,19 +120,15 @@
       width: 465px;
     }
     @include media("max", "lg") {
-      width: 472px;
-      position: absolute;
-      left: -29px;
-    }
-    @include media("max", "md") {
-      width: 100%;
-      left: 0;
+      width: 40%;
+      position: fixed;
+      right: 0px;
     }
   }
 
   &::after {
     content: '';
-    position: fixed;
+    position: absolute;
     top: 36em;
     left: auto;
     right: 490px;
@@ -149,9 +144,9 @@
       right: 9em;
     }
     @include media("max", "lg") {
-      position: absolute;
-      top: 28rem;
-      left: 17rem;
+      position: fixed;
+      top: 36rem;
+      right: 8rem;
     }
 
   }
