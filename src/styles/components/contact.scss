@@ -1,8 +1,15 @@
-.contact-page {
+body {
   background-color: $background-dark;
 }
 
+.contact-page {
+  width: auto;
+  margin-left: 121px;
+}
+
 .header {
+  width: auto;
+  margin-right: 121px;
   img {
     width: 216px;
     padding-left: 31px;
@@ -15,6 +22,7 @@
 }
 
 .side-contact {
+  width: auto;
   padding-top: 67px;
 
   @include media("max", "md") {
@@ -22,9 +30,7 @@
   }
 
   .side__wrapper {
-    @include media("max", "xxl") {
-      width: 100%;
-    }
+    width: 70%;
   }
 }
 
@@ -78,6 +84,10 @@
   margin: 26px 0;
 }
 
+.form {
+  
+}
+
 .form__data-contact-file-label {
   @include media("max", "lg") {
     margin-bottom: 30px;
@@ -98,40 +108,21 @@
 
 .map-contact {
   position: relative;
-  width: 50%;
+  width: 45%;
+  background: url('/src/assets/images/map.jpg') no-repeat;
+  background-size: cover;
+
+
   @include media("max", "md") {
     width: 100%;
-  }
-
-  &::before {
-    content: '';
-    position: absolute;
-    right: 0;
-    left: auto;
-    background: url('/src/assets/images/map.jpg') no-repeat;
-    width: 820px;
-    height: 1155px;
-    z-index: 0;
-
-    @include media("max", "xxl") {
-      width: 713px;
-    }
-    @include media("max", "xl") {
-      width: 465px;
-    }
-    @include media("max", "lg") {
-      width: 40%;
-      position: fixed;
-      right: 0px;
-    }
   }
 
   &::after {
     content: '';
     position: absolute;
-    top: 36em;
-    left: auto;
-    right: 490px;
+    top: 30em;
+    left: 18em;
+    right: auto;
     background: url('/src/assets/images/logo/logo.svg') no-repeat;
     width: 43px;
     height: 57px;
