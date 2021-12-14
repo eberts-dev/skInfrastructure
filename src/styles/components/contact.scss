@@ -5,6 +5,10 @@ body {
 .contact-page {
   width: auto;
   margin-left: 121px;
+
+  @include media("max", "md") {
+    margin-left: 0px;
+  }
 }
 
 .header {
@@ -15,9 +19,19 @@ body {
     padding-left: 31px;
   }
 
+  @include media("max", "md") {
+    margin-left: 60px;
+  }
+
   .header__wrapper {
     display: flex;
     align-items: center;
+  }
+}
+
+.header__logo {
+  @include media("max", "md") {
+    flex-wrap: wrap;
   }
 }
 
@@ -28,9 +42,11 @@ body {
   @include media("max", "md") {
     flex-wrap: wrap;
   }
+}
 
-  .side__wrapper {
-    width: 70%;
+.side__wrapper {
+  @include media("max", "md") {
+    margin-left: 60px;
   }
 }
 
@@ -90,16 +106,21 @@ body {
 
 .form__data-contact-file-label {
   @include media("max", "lg") {
-    margin-bottom: 30px;
+    order: 1;
   }
   @include media("max", "md") {
-    margin-bottom: 0px;
+    
   }
 }
 
 .form__data-contact-name, .form__data-contact-phone, 
 .form__data-contact-file-label {
   background: $contact-input;
+
+  @include media("max", "xl") {
+    width: 100%;
+  }
+
 }
 
 .form__contact-data {
@@ -108,13 +129,14 @@ body {
 
 .map-contact {
   position: relative;
-  width: 45%;
+  width: 55%;
   background: url('/src/assets/images/map.jpg') no-repeat;
   background-size: cover;
 
-
   @include media("max", "md") {
     width: 100%;
+    height: 1150px;
+    position: relative;
   }
 
   &::after {
@@ -128,27 +150,62 @@ body {
     height: 57px;
     z-index: 2;
 
-    @include media("max", "xxl") {
-      right: 24em;
+    @include media("max", "md") {
+    
     }
-    @include media("max", "xl") {
-      right: 9em;
-    }
-    @include media("max", "lg") {
-      position: fixed;
-      top: 36rem;
-      right: 8rem;
-    }
-
   }
 }
 
 .form__item-contact {
-  padding-top: 30px;
+  width: 320px;
+  margin-right: 0px;
+    @include media("max", "xxl") {
+      padding-top: 20px;
+    }
+    @include media("max", "xl") {
+      width: 100%;
+    }
+    @include media("max", "md") {
+      padding-top: 0px;
+    }
 }
 
 .form__succes-contact {
   @include media("max", "md") {
-    padding-top: 30px;
+    order: 3;
+    padding-top: 0px;
+    padding-bottom: 0;
+  }
+  @include media("max", "sm") {
+    order: 2;
+  }
+}
+
+.form__button-contact{ 
+  width: 320px;
+  @include media("max", "xxl") {
+    order: 2;
+  }
+
+  @include media("max", "xl") {
+    width: 100%;
+  }
+
+  @include media("max", "md") {
+    order: 3;
+    height: 60px;
+  }
+}
+
+.form__succes-label {
+
+
+  span {
+    padding-left: 20px;
+    // display: inherit;
+
+    @include media("max", "md") {
+    
+    }
   }
 }

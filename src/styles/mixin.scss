@@ -2,7 +2,7 @@
 $xxl-width: 1640px;
 $xl-width: 1465px;
 $lg-width: 1200px;
-$md-width: 940px;
+$md-width: 960px;
 $sm-width: 740px;
 $xm-width: 568px;
 $xs-width: 390px;
@@ -21,9 +21,7 @@ $sizes: ("vs":$vs-width, "xs":$xs-width, "xm":$xm-width, "sm":$sm-width, "md":$m
   }
 }
 
-
 // @include media("max", "md") {}
-
 
 // INITIAL
 
