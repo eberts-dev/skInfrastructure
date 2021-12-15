@@ -215,6 +215,11 @@ fieldset {
   }
 }
 
+.header-contact {
+  display: flex;
+  align-items: center;
+}
+
 .header-contact__phone {
   font-family: 'Circe-Bold';
   font-size: 20px;
@@ -228,14 +233,8 @@ fieldset {
   }
 
   @include media("max", "xs") {
-    padding-right: 35px;
-  }
-
-  @include media("max", "vs") {
     padding-right: 70px;
   }
-
-
 
 }
 
@@ -266,11 +265,6 @@ fieldset {
   padding: 10px 25px 10px 42px;
   position: relative;
 
-  @include media("max", "sm") {
-    display: none;
-
-  }
-
   &::before {
     content: '';
     position: absolute;
@@ -280,9 +274,24 @@ fieldset {
     left: 17px;
     top: 12px;
 
+    @include media("max", "md") {
+      top: 17px;
+    }
   }
 
+  @include media("max", "md") {
+    padding: 0;
+    height: 50px;
+    width: 50px;
 
+    span {
+      display: none;
+    }
+  }
+
+  @include media("max", "sm") {
+    display: none;
+  }
 }
 
 .visualy__hiden {
@@ -1073,6 +1082,8 @@ fieldset {
 .form {
   z-index: 1;
   position: relative;
+  margin-bottom: 49px;
+  margin-right: 40px;
 }
   
 .form__header {
@@ -1080,20 +1091,22 @@ fieldset {
 }
 
 .form__wrapper {
-  max-width: 713px;
+  max-width: 714px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  padding-bottom: 36px;
+  padding-bottom: 20px;
+
+  @include media("max", "xl") {
+    flex-direction: column;
+  }
 
   @include media("max", "sm") {
     padding-bottom: 0;
   }
 
   @include media("max", "xs") {
-    width: 270px;
+    
   }
-
 }
 
 .form__title {
@@ -1106,9 +1119,15 @@ fieldset {
 .form__item {
   display: flex;
   flex-wrap: wrap;
-  max-width: 339px;
+  max-width: 320px;
+  margin-right: 34px;
   order: 1;
   position: relative;
+
+  @include media("max", "xl") {
+    max-width: 100%;
+    margin-right: 0;
+  }
 
   @include media("max", "sm") {
     max-width: 100%;
@@ -1121,6 +1140,11 @@ fieldset {
   font-family: 'Gilam-Book'; 
   font-size: 18px;
   color: $white;
+
+  @include media("max", "lg") {
+  
+  }
+
 }
 
 .form__data {
@@ -1140,8 +1164,9 @@ fieldset {
     background: $main-input;
     color: $white;
     border: none;
-    padding: 15px 25px;
+    padding: 0 25px;
     width: 339px;
+    height: 60px;
     border-color: transparent;
     outline-color: $akcent;
     
@@ -1166,7 +1191,7 @@ fieldset {
       font-size: 14px;
     }
 
-    @include media("max", "sm") {
+    @include media("max", "xl") {
       width: 100%;
     }
 
@@ -1187,8 +1212,10 @@ fieldset {
 .form__file-label {
   color: $white;
   font-family: 'Gilam-Book';
-  padding: 15px 25px;
+  padding: 15px 25px 0 25px;
+  line-height: 2;
   width: 339px;
+  height: 45px;
   background: $background-dark;
   position: relative;
 
@@ -1204,6 +1231,9 @@ fieldset {
     }
 }
 
+.contact {
+  padding-right: 20px;
+}
 
 .form__file-marker {
   float: right;
@@ -1244,9 +1274,13 @@ input[type=file]:focus + .form__file-label {
 }
 
 .form__succes {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 41px;
+  padding-bottom: 25px;
   order: 3;
+
+  @include media("max", "xxl") {
+    order: 2;
+  }  
   @include media("max", "md") {
     order: 2;
     padding-top: 0;
@@ -1272,10 +1306,11 @@ input[type=file]:focus + .form__file-label {
 }
 
 .form__succes-input + .form__succes-label {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   user-select: none;
   cursor: pointer;
+  flex-wrap: nowrap;
 
   &::before {
     content: '';
@@ -1286,7 +1321,6 @@ input[type=file]:focus + .form__file-label {
     flex-grow: 0;
     border: 1px solid $akcent;
     border-radius: 0;
-    margin-right: 13px;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 50% 50%;
@@ -1302,26 +1336,27 @@ input[type=file]:focus + .form__file-label {
 }
 
 .form__succes-link {
-  display: block;
+  display: inline-block;
   cursor: pointer;
   color: $white;
-  margin-left: 5px;
   border-bottom: 1px solid $white;
 
-  @include media("max", "sm") {
-    margin-left: 42px;
-  }
   @include media("max", "xs") {
-    width: 161px;
+    // width: 161px;
+  }
+
+  @include media("max", "vs") {
+    width: 159px;
   }
 
 }
 
 // FILES
 
+@import '../styles/components/contact.scss';
 @import 'components/main';
 @import 'components/logo';
-@import '../styles/components/contact.scss';
+
 
 
 
