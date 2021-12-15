@@ -23,15 +23,48 @@ body {
     margin-left: 60px;
   }
 
+  @include media("max", "xm") {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
   .header__wrapper {
     display: flex;
     align-items: center;
+  }
+
+  img {
+    @include media("max", "sm") {
+      display: none;
+    }
   }
 }
 
 .header__logo {
   @include media("max", "md") {
     flex-wrap: wrap;
+  }
+  img {
+    @include media("max", "sm") {
+      display: none;
+    }
+  }
+}
+
+.header__logo-mobile {
+  img {
+    @include media("max", "sm") {
+      display: block;
+      background: url('/src/assets/images/logo/logo.svg') no-repeat;
+      background-size: cover;
+      width: 0;
+      height: 40px;
+      margin-left: 20px;
+    }
+    @include media("max", "vs") {
+      display: none;
+    }
+
   }
 }
 
@@ -47,6 +80,9 @@ body {
 .side__wrapper {
   @include media("max", "md") {
     margin-left: 60px;
+  }
+  @include media("max", "xm") {
+    margin-left: 30px;
   }
 }
 
@@ -129,14 +165,22 @@ body {
 
 .map-contact {
   position: relative;
-  width: 55%;
+  width: 50%;
   background: url('/src/assets/images/map.jpg') no-repeat;
   background-size: cover;
+
+  @include media("max", "xxl") {
+    width: 40%;
+  }
 
   @include media("max", "md") {
     width: 100%;
     height: 1150px;
     position: relative;
+  }
+
+  @include media("max", "xm") {
+    background-position: 17%;
   }
 
   &::after {
@@ -150,8 +194,8 @@ body {
     height: 57px;
     z-index: 2;
 
-    @include media("max", "md") {
-    
+    @include media("max", "xm") {
+      left: 50%;
     }
   }
 }
@@ -160,10 +204,11 @@ body {
   width: 320px;
   margin-right: 0px;
     @include media("max", "xxl") {
-      padding-top: 20px;
+      
     }
     @include media("max", "xl") {
       width: 100%;
+      padding-top: 20px;
     }
     @include media("max", "md") {
       padding-top: 0px;
@@ -171,13 +216,14 @@ body {
 }
 
 .form__succes-contact {
+  @include media("max", "xl") {
+    order: 2;
+  }
   @include media("max", "md") {
-    order: 3;
     padding-top: 0px;
     padding-bottom: 0;
   }
   @include media("max", "sm") {
-    order: 2;
   }
 }
 
@@ -189,10 +235,11 @@ body {
 
   @include media("max", "xl") {
     width: 100%;
+    margin-top: 30px;
+    order: 3;
   }
 
   @include media("max", "md") {
-    order: 3;
     height: 60px;
   }
 }

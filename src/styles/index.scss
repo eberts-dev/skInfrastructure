@@ -126,7 +126,7 @@ fieldset {
 
 
   .side__wrapper {
-    width: 55%;
+    width: 65%;
 
     @include media("max", "md") {
       width: 100%;
@@ -233,12 +233,9 @@ fieldset {
   }
 
   @include media("max", "xs") {
-    padding-right: 35px;
-  }
-
-  @include media("max", "vs") {
     padding-right: 70px;
   }
+
 }
 
 .mark {
@@ -1086,7 +1083,7 @@ fieldset {
   z-index: 1;
   position: relative;
   margin-bottom: 49px;
-  margin-right: 60px;
+  margin-right: 40px;
 }
   
 .form__header {
@@ -1108,7 +1105,7 @@ fieldset {
   }
 
   @include media("max", "xs") {
-    width: 270px;
+    
   }
 }
 
@@ -1277,7 +1274,7 @@ input[type=file]:focus + .form__file-label {
 }
 
 .form__succes {
-  padding-top: 15px;
+  padding-top: 41px;
   padding-bottom: 25px;
   order: 3;
 
@@ -1309,10 +1306,11 @@ input[type=file]:focus + .form__file-label {
 }
 
 .form__succes-input + .form__succes-label {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   user-select: none;
   cursor: pointer;
+  flex-wrap: nowrap;
 
   &::before {
     content: '';
@@ -1338,16 +1336,17 @@ input[type=file]:focus + .form__file-label {
 }
 
 .form__succes-link {
-  display: block;
+  display: inline-block;
   cursor: pointer;
   color: $white;
   border-bottom: 1px solid $white;
 
-  @include media("max", "sm") {
-    margin-left: 42px;
-  }
   @include media("max", "xs") {
-    width: 161px;
+    // width: 161px;
+  }
+
+  @include media("max", "vs") {
+    width: 159px;
   }
 
 }
