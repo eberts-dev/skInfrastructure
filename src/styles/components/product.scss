@@ -49,7 +49,6 @@
 }
 
 .product__company-inprogress {
-  position: relative;
   &:before {
     content: '';
     position: absolute;
@@ -61,39 +60,36 @@
     background: $background-inprogress;
     border-radius: 50%;
     animation: yellow-pulse 1.4s infinite;
-  }
 
-  @-webkit-keyframes yellow-pulse {
-    0% {
-      -webkit-box-shadow: $background-inprogress;
+    @-webkit-keyframes yellow-pulse {
+      0% {
+        -webkit-box-shadow: $background-inprogress;
+      }
+      70% {
+          -webkit-box-shadow: $akcent-hight-pulse;
+      }
+      100% {
+          -webkit-box-shadow: $akcent-pulse;
+      }
     }
-    70% {
-        -webkit-box-shadow: $akcent-hight-pulse;
-    }
-    100% {
-        -webkit-box-shadow: $akcent-pulse;
+    @keyframes yellow-pulse {
+      0% {
+        -moz-box-shadow: $akcent-low-pulse;
+        box-shadow: $akcent-low-pulse;
+      }
+      70% {
+          -moz-box-shadow: $background-inprogress;
+          box-shadow: $akcent-hight-pulse;
+      }
+      100% {
+          -moz-box-shadow: $akcent-pulse;
+          box-shadow: $akcent-pulse;
+      }
     }
   }
-  @keyframes yellow-pulse {
-    0% {
-      -moz-box-shadow: $akcent-low-pulse;
-      box-shadow: $akcent-low-pulse;
-    }
-    70% {
-        -moz-box-shadow: $background-inprogress;
-        box-shadow: $akcent-hight-pulse;
-    }
-    100% {
-        -moz-box-shadow: $akcent-pulse;
-        box-shadow: $akcent-pulse;
-    }
-  }
-
-
 }
 
 .product__company-ready {
-  position: relative;
   &:before {
     content: '';
     position: absolute;
@@ -105,31 +101,57 @@
     background: $background-ready;
     border-radius: 50%;
     animation: green-pulse 1.4s infinite;
-  }
 
-  @-webkit-keyframes green-pulse {
-    0% {
-      -webkit-box-shadow: $background-ready;
+    @-webkit-keyframes green-pulse {
+      0% {
+        -webkit-box-shadow: $background-ready;
+      }
+      70% {
+          -webkit-box-shadow: $akcent-hight-ready;
+      }
+      100% {
+          -webkit-box-shadow: $akcent-ready;
+      }
     }
-    70% {
-        -webkit-box-shadow: $akcent-hight-ready;
-    }
-    100% {
-        -webkit-box-shadow: $akcent-ready;
+    @keyframes green-pulse {
+      0% {
+        -moz-box-shadow: $akcent-low-ready;
+        box-shadow: $akcent-low-ready;
+      }
+      70% {
+          -moz-box-shadow: $background-ready;
+          box-shadow: $akcent-hight-ready;
+      }
+      100% {
+          -moz-box-shadow: $akcent-ready;
+          box-shadow: $akcent-pulse;
+      }
     }
   }
-  @keyframes green-pulse {
-    0% {
-      -moz-box-shadow: $akcent-low-ready;
-      box-shadow: $akcent-low-ready;
-    }
-    70% {
-        -moz-box-shadow: $background-ready;
-        box-shadow: $akcent-hight-ready;
-    }
-    100% {
-        -moz-box-shadow: $akcent-ready;
-        box-shadow: $akcent-pulse;
-    }
-  }
+}
+
+.product__company-ready:hover::before{
+  color: $white;
+  content: 'завершен';
+  font-family: 'Gilam-Regular'; 
+  font-size: 13px;
+  line-height: 1.8;
+  overflow: hidden;
+  background: $background-ready;
+  width: 86px;
+  border-radius: 22px;
+  transition: .3s;
+}
+
+.product__company-inprogress:hover::before {
+  color: $white;
+  content: 'в процессе';
+  font-family: 'Gilam-Regular'; 
+  font-size: 13px;
+  line-height: 1.8;
+  overflow: hidden;
+  background: $background-inprogress;
+  width: 86px;
+  border-radius: 22px;
+  transition: .3s;
 }
