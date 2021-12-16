@@ -11,31 +11,33 @@ body {
   }
 }
 
-.header {
-  width: auto;
-  margin-right: 121px;
-  img {
-    width: 216px;
-    padding-left: 31px;
-  }
-
-  @include media("max", "md") {
-    margin-left: 60px;
-  }
-
-  @include media("max", "xm") {
-    margin-left: 30px;
-    margin-right: 30px;
-  }
-
-  .header__wrapper {
-    display: flex;
-    align-items: center;
-  }
-
-  img {
-    @include media("max", "sm") {
-      display: none;
+.contact-page {
+  .header {
+    width: auto;
+    margin-right: 121px;
+    img {
+      width: 216px;
+      padding-left: 31px;
+    }
+  
+    @include media("max", "md") {
+      margin-left: 60px;
+    }
+  
+    @include media("max", "xm") {
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+  
+    .header__wrapper {
+      display: flex;
+      align-items: center;
+    }
+  
+    img {
+      @include media("max", "sm") {
+        display: none;
+      }
     }
   }
 }

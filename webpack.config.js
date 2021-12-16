@@ -89,14 +89,12 @@ const plugins = () => {
             }
         }),
         new HTMLWebpackPlugin({
-            filename: 'contact.html',
             template: './contact.html',
             minify: {
                 collapseWhitespace: isProduction
             }
         }),
         new HTMLWebpackPlugin({
-            filename: 'product.html',
             template: './product.html',
             minify: {
                 collapseWhitespace: isProduction

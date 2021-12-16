@@ -1,0 +1,135 @@
+.product-page {
+  margin-bottom: 75px;
+  .header {
+    // margin-right: 180px;
+    // margin-left: 180px;
+    // max-width: $xl-width;
+
+    img {
+      width: 216px;
+      padding-left: 31px;
+    }
+  
+    @include media("max", "md") {
+      margin-left: 60px;
+    }
+  
+    @include media("max", "xm") {
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+  
+    .header__wrapper {
+      display: flex;
+      align-items: center;
+    }
+  
+    img {
+      @include media("max", "sm") {
+        display: none;
+      }
+    }
+  }
+}
+
+.product-indent {
+  // margin-right: 121px;
+  // margin-left: 121px;
+  background: $background-dark;
+  padding-bottom: 153px;
+}
+
+.product__wrapper-page {
+  padding-top: 0;
+  max-width: $xl-width;
+}
+
+.product__list-page {
+  padding-top: 85px;
+}
+
+.product__company-inprogress {
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 29px;
+    right: 26px;
+    left: auto;
+    width: 22px;
+    height: 22px;
+    background: $background-inprogress;
+    border-radius: 50%;
+    animation: yellow-pulse 1.4s infinite;
+  }
+
+  @-webkit-keyframes yellow-pulse {
+    0% {
+      -webkit-box-shadow: $background-inprogress;
+    }
+    70% {
+        -webkit-box-shadow: $akcent-hight-pulse;
+    }
+    100% {
+        -webkit-box-shadow: $akcent-pulse;
+    }
+  }
+  @keyframes yellow-pulse {
+    0% {
+      -moz-box-shadow: $akcent-low-pulse;
+      box-shadow: $akcent-low-pulse;
+    }
+    70% {
+        -moz-box-shadow: $background-inprogress;
+        box-shadow: $akcent-hight-pulse;
+    }
+    100% {
+        -moz-box-shadow: $akcent-pulse;
+        box-shadow: $akcent-pulse;
+    }
+  }
+
+
+}
+
+.product__company-ready {
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 29px;
+    right: 26px;
+    left: auto;
+    width: 22px;
+    height: 22px;
+    background: $background-ready;
+    border-radius: 50%;
+    animation: green-pulse 1.4s infinite;
+  }
+
+  @-webkit-keyframes green-pulse {
+    0% {
+      -webkit-box-shadow: $background-ready;
+    }
+    70% {
+        -webkit-box-shadow: $akcent-hight-ready;
+    }
+    100% {
+        -webkit-box-shadow: $akcent-ready;
+    }
+  }
+  @keyframes green-pulse {
+    0% {
+      -moz-box-shadow: $akcent-low-ready;
+      box-shadow: $akcent-low-ready;
+    }
+    70% {
+        -moz-box-shadow: $background-ready;
+        box-shadow: $akcent-hight-ready;
+    }
+    100% {
+        -moz-box-shadow: $akcent-ready;
+        box-shadow: $akcent-pulse;
+    }
+  }
+}
