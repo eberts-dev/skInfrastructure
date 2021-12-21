@@ -138,16 +138,21 @@ body {
   margin: 26px 0;
 }
 
-.form {
-  
-}
-
 .form__data-contact-file-label {
   @include media("max", "lg") {
     order: 1;
   }
   @include media("max", "md") {
     
+  }
+}
+
+.form__wrapper {
+  &-contact {
+    @include media("max", "xl") {
+      flex-direction: column;
+      max-width: 712px;
+    }
   }
 }
 
@@ -250,8 +255,7 @@ body {
 
 
   span {
-    padding-left: 20px;
-    // display: inherit;
+
 
     @include media("max", "md") {
     
