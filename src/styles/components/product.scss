@@ -1,9 +1,10 @@
 .product-page {
-  padding-bottom: 75px;
   .header {
     width: auto;
     margin-right: 121px;
     margin-left: 121px;
+    max-width: $xl-width;
+    margin: 0 auto;
     img {
       width: 216px;
       padding-left: 31px;
@@ -33,18 +34,15 @@
 
 
 .product-indent {
-  // margin-right: 121px;
-  // margin-left: 121px;
   background: $background-dark;
 }
 
 .product__wrapper{
   &-page {
-    padding-top: 0;
-    max-width: $xl-width;
     width: auto;
-    margin-right: 121px;
-    margin-left: 121px;
+    max-width: $xl-width;
+    margin: 0 auto;
+    padding-top: 75px;
   }
 }
 
@@ -183,6 +181,6 @@
 
 .form__data {
   &-product {
-    max-width: 100%;
+
   }
 }

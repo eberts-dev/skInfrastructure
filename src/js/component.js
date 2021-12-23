@@ -5,5 +5,3 @@
 // const logo = document.querySelector('.logo');
 
 // logo.innerHTML = `<img class="logo__img" src="${WebpackLogo}">`;
-
-
