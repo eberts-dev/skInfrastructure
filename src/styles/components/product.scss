@@ -5,6 +5,12 @@
     margin-left: 121px;
     max-width: $xl-width;
     margin: 0 auto;
+
+    @include media("max", "xl") {
+      margin-right: 121px;
+      margin-left: 121px;
+    }
+
     img {
       width: 216px;
       padding-left: 31px;
@@ -32,9 +38,49 @@
   }
 }
 
+.side-product {
+  @include media("max", "xl") {
+    margin-right: 121px;
+    margin-left: 121px;
+  }
+  @include media("max", "sm") {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+// .side-wrapper {
+//   @include media("max", "md") {
+//     margin-left: 0;
+//   }
+// }
+
+.product__list-page > .product__list-item {
+  @include media("max", "sm") {
+    width: 100%;
+  }
+  @include media("max", "xm") {
+    width: 450px;
+  }
+}
+
 
 .product-indent {
   background: $background-dark;
+}
+
+.product__header {
+  @include media("max", "xl") {
+    margin-right: 121px;
+    margin-left: 121px;
+  }
+  @include media("max", "lg") {
+    width: auto;
+  }
+  @include media("max", "xm") {
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 .product__wrapper{
@@ -47,17 +93,17 @@
 }
 
 .product__list {
-  &-page {
-    @include media("max", "lg") {
-      justify-content: start;
-    }
-  }
   &-link {
     @include media("max", "xl") {
-      width: 400px;
+      width: 380px;
+      height: 315px;
     }
     @include media("max", "lg") {
-
+      width: 487px;
+      height: 391px;
+    }
+    @include media("max", "sm") {
+      width: 445px;
     }
   }
 }
@@ -172,15 +218,45 @@
 
  .footer__wrapper {
   &-product {
-    @include media("max", "xl") {
-      margin-right: 121px;
-      margin-left: 121px;
-    }
+    position: relative;
+
+  }
+  @include media("max", "xl") {
+    margin-right: 121px;
+    margin-left: 121px;
+  }
+  @include media("max", "xl") {
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
 .form__data {
   &-product {
+    @include media("max", "xl") {
+      max-width: 100%;
+    }
+  }
+}
+.form__button-product {
+  width: 307px;
+  @include media("max", "sm") {
+    width: 100%;
+  }
+}
 
+.form__file-label {
+  @include media("max", "xl") {
+    width: 375px;
+  }
+}
+
+.form__item-product {
+  @include media("max", "xl") {
+    margin-right: 34px;
+  }
+  @include media("max", "sm") {
+    margin-right: 0;
+    width: 100%;
   }
 }
