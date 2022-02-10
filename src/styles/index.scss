@@ -978,7 +978,7 @@ fieldset {
     z-index: 0;
 
     @include media("max", "xl") {
-      width: 40%;
+      width: 50%;
     }
 
     @include media("max", "sm") {
@@ -1180,17 +1180,16 @@ fieldset {
     width: 100%;
     padding-bottom: 20px;
   }
+  
+  &-product {
+    width: 100%;
+  }
 }
 
 .form__description {
   font-family: 'Gilam-Book'; 
   font-size: 18px;
   color: $white;
-
-  @include media("max", "lg") {
-  
-  }
-
 }
 
 .form__data {
@@ -1244,10 +1243,6 @@ fieldset {
 
   }
 
-.form__button {
-  background: $main-input;
-}
-
 
 #form__Icon {
   fill: $white;
@@ -1283,7 +1278,6 @@ fieldset {
 }
 
 .form__file-marker {
-  // float: right;
   display: inline-block;
 }
 
@@ -1306,6 +1300,7 @@ input[type=file]:focus + .form__file-label {
   background: inherit;
   font-family: 'Gilam-SemiBold'; 
   order: 2;
+  background: $main-input;
 
   @include media("max", "sm") {
     order: 3;
