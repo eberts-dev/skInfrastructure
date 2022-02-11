@@ -1,7 +1,7 @@
 {
   "name": "project",
   "version": "1.0.0",
-  "description": "",
+  "description": "<br/> <br/>",
   "main": "main.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack --mode development",
@@ -56,5 +56,13 @@
     "jquery": "^3.6.0",
     "lodash": "^4.17.15",
     "normalize.css": "^8.0.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rumforweb/sk-Infrastructure.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rumforweb/sk-Infrastructure/issues"
+  },
+  "homepage": "https://github.com/rumforweb/sk-Infrastructure#readme"
 }

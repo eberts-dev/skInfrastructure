@@ -1,24 +1,23 @@
 .product-page {
   .header {
-    width: auto;
-    margin-right: 121px;
-    margin-left: 121px;
     max-width: $xl-width;
     margin: 0 auto;
-
-    @include media("max", "xl") {
-      margin-right: 121px;
-      margin-left: 121px;
-    }
+    padding-left: 20px;
+    padding-right: 20px;
 
     img {
       width: 216px;
       padding-left: 31px;
     }
+
+    @include media("max", "lg") {
+      width: 930px;
+    }
   
     @include media("max", "md") {
       margin-left: 40px;
       margin-right: 40px;
+      width: auto;
     }
   
     @include media("max", "xm") {
@@ -43,25 +42,27 @@
   @include media("max", "xl") {
 
   }
+  @include media("max", "md") {
+    width: 640px;
+  }
+
   @include media("max", "sm") {
     margin-right: auto;
     margin-left: auto;
   }
 }
 
-// .side-wrapper {
-//   @include media("max", "md") {
-//     margin-left: 0;
-//   }
-// }
-
 .product__list-page {
   justify-content: start;
+  @include media("max", "md") {
+    justify-content: center;
+  }
 }
 
 .product__list-page > .product__list-item {
+
   @include media("max", "sm") {
-    width: 100%;
+    
   }
   @include media("max", "xm") {
     width: 450px;
@@ -80,6 +81,13 @@
   @include media("max", "lg") {
     
   }
+
+  @include media("max", "md") {
+    width: 640px;
+  }
+
+
+
   @include media("max", "xm") {
     margin-right: auto;
     margin-left: auto;
@@ -87,10 +95,16 @@
 }
 
 .product__wrapper{
+
+  @include media("max", "lg") {
+    width: 930px;
+  }
+
+  @include media("max", "md") {
+    width: 730px;
+  }
+
   &-page {
-    width: auto;
-    max-width: $xl-width;
-    margin: 0 auto;
     padding-top: 75px;
   }
 }
@@ -98,16 +112,16 @@
 .product__list {
   &-link {
     @include media("max", "xl") {
-      width: 380px;
+      width: 393px;
       height: 315px;
     }
     @include media("max", "lg") {
-      width: 487px;
+      width: 460px;
       height: 391px;
     }
     @include media("max", "md") {
-      width: 360px;
-      height: 315px;
+      // width: 314px;
+      // height: 315px;
     }
     @include media("max", "sm") {
       width: 445px;
@@ -226,12 +240,14 @@
  .footer__wrapper {
   &-product {
     position: relative;
+    @include media("max", "lg") {
+      width: 930px;
+    }
+    @include media("max", "md") {
+      width: 640px;
+    }
+  }
 
-  }
-  @include media("max", "xl") {
-    margin-right: 121px;
-    margin-left: 121px;
-  }
   @include media("max", "xl") {
     margin-right: auto;
     margin-left: auto;
@@ -241,15 +257,17 @@
 .form__data {
   &-product {
     @include media("max", "xl") {
-      max-width: 100%;
+      
     }
   }
 
 }
 .form__button-product {
-  width: 327px;
-  @include media("max", "sm") {
+  width: 320px;
+  @include media("max", "md") {
     width: 100%;
+    margin-top: 33px;
+    padding: 20px 0;
   }
 }
 
@@ -263,8 +281,24 @@
   @include media("max", "xl") {
     margin-right: 34px;
   }
+  @include media("max", "md") {
+    max-width: 100%;
+    margin-right: 0;
+  }
   @include media("max", "sm") {
     margin-right: 0;
     width: 100%;
+  }
+}
+
+.form__file-product {
+  @include media("max", "md") {
+    width: 100%;
+  }
+}
+
+.form__wrapper {
+  & .form__item-product:nth-child(2) {
+    padding-top: 20px;
   }
 }
