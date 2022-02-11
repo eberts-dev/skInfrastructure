@@ -17,6 +17,18 @@ $background-footer: #232323;
 $main-input: #151515;
 $contact-input: #0E0E0E;
 
+//Animation
+$background-inprogress: #E4B564;
+$akcent-pulse: 0 0 0 0 rgba(204,169,44, 0);
+$akcent-low-pulse: 0 0 0 0 rgba(204,169,44, 0.4);
+$akcent-hight-pulse: 0 0 0 10px rgba(204,169,44, 0);
+
+$background-ready: #69CE6D;
+$akcent-ready: 0 0 0 0 rgba(103, 218, 57, 0);
+$akcent-low-ready: 0 0 0 0 rgba(103, 218, 57, 0.4);
+$akcent-hight-ready: 0 0 0 10px rgba(103, 218, 57, 0);
+
+
 @import './mixin.scss';
 
 
@@ -130,6 +142,7 @@ fieldset {
 
     @include media("max", "md") {
       width: 100%;
+      margin-left: 0;
     }
 
   }
@@ -185,12 +198,12 @@ fieldset {
   }
 }
 
-.headerMenu__link {
+.header__menu-link {
   display: inline-block;
   height: 15px;
 }
 
-.headerMenu__burger {
+.header__menu-burger {
   width: 20px;
   border-bottom: 2px solid $white;
   display: block;
@@ -783,27 +796,51 @@ fieldset {
   }
 
   &:nth-child(1) {
-    background: url(../assets/images/product/1.jpg) no-repeat;
+    background: url('../assets/images/product/1.jpg') no-repeat;
   }
 
   &:nth-child(2) {
-    background: url(../assets/images/product/2.jpg) no-repeat;
+    background: url('../assets/images/product/2.jpg') no-repeat;
   }
 
   &:nth-child(3) {
-    background: url(../assets/images/product/3.jpg) no-repeat;
+    background: url('../assets/images/product/3.jpg') no-repeat;
   }
 
   &:nth-child(4) {
-    background: url(../assets/images/product/4.jpg) no-repeat;
+    background: url('../assets/images/product/4.jpg') no-repeat;
   }
 
   &:nth-child(5) {
-    background: url(../assets/images/product/5.jpg) no-repeat;
+    background: url('../assets/images/product/5.jpg') no-repeat;
   }
 
   &:nth-child(6) {
-    background: url(../assets/images/product/6.jpg) no-repeat;
+    background: url('../assets/images/product/6.jpg') no-repeat;
+  }
+
+  &:nth-child(7) {
+    background: url('../assets/images/product/7.jpg') no-repeat;
+  }
+
+  &:nth-child(8) {
+    background: url('../assets/images/product/8.jpg') no-repeat;
+  }
+
+  &:nth-child(9) {
+    background: url('../assets/images/product/9.jpg') no-repeat;
+  }
+
+  &:nth-child(10) {
+    background: url('../assets/images/product/10.jpg') no-repeat;
+  }
+
+  &:nth-child(11) {
+    background: url('../assets/images/product/11.jpg') no-repeat;
+  }
+
+  &:nth-child(12) {
+    background: url('../assets/images/product/12.jpg') no-repeat;
   }
 
   @include media("max", "sm") {
@@ -832,6 +869,11 @@ fieldset {
     .product__company-wrapper {
       display: block;
     }
+  }
+
+  @include media("max", "md") {
+    width: 246px;
+    height: 206px;
   }
 
   @include media("max", "sm") {
@@ -866,9 +908,14 @@ fieldset {
     width: 326px;
     margin: 0 auto;
 
+    @include media("max", "lg") {
+      width: 90%;
+      font-size: 16px;
+      width: 192px;
+    }
+
     @include media("max", "sm") {
       width: 90%;
-      font-size: 19px;
       width: 192px;
     }
   }
@@ -885,6 +932,10 @@ fieldset {
   color: $white;
   width: 245px;
   margin: 0 auto;
+
+  @include media("max", "lg") {
+    font-size: 16px;
+  } 
 
   @include media("max", "sm") {
     display: none;
@@ -920,15 +971,16 @@ fieldset {
     content: '';
     position: absolute;
     background: url(../assets/images/map-full.svg) no-repeat;
-    width: 935px;
+    width: 772px;
     height: 100%;
     top: 0;
     right: 0;
     z-index: 0;
 
     @include media("max", "xl") {
-      width: 40%;
+      width: 50%;
     }
+
     @include media("max", "sm") {
       width: 100%;
       top: 84%;
@@ -938,7 +990,6 @@ fieldset {
     @include media("max", "xs") {
       background-position: 7%;
     }
-
   }
 }
 
@@ -1091,14 +1142,9 @@ fieldset {
 }
 
 .form__wrapper {
-  max-width: 714px;
   display: flex;
   flex-wrap: wrap;
   padding-bottom: 20px;
-
-  @include media("max", "xl") {
-    flex-direction: column;
-  }
 
   @include media("max", "sm") {
     padding-bottom: 0;
@@ -1134,21 +1180,21 @@ fieldset {
     width: 100%;
     padding-bottom: 20px;
   }
+  
+  &-product {
+    width: 100%;
+  }
 }
 
 .form__description {
   font-family: 'Gilam-Book'; 
   font-size: 18px;
   color: $white;
-
-  @include media("max", "lg") {
-  
-  }
-
 }
 
 .form__data {
   padding-bottom: 97px;
+  max-width: 712px;
 
   &-label {
     font-family: 'Gilam-Book'; 
@@ -1197,10 +1243,6 @@ fieldset {
 
   }
 
-.form__button {
-  background: $main-input;
-}
-
 
 #form__Icon {
   fill: $white;
@@ -1236,7 +1278,6 @@ fieldset {
 }
 
 .form__file-marker {
-  float: right;
   display: inline-block;
 }
 
@@ -1259,6 +1300,7 @@ input[type=file]:focus + .form__file-label {
   background: inherit;
   font-family: 'Gilam-SemiBold'; 
   order: 2;
+  background: $main-input;
 
   @include media("max", "sm") {
     order: 3;
@@ -1324,6 +1366,11 @@ input[type=file]:focus + .form__file-label {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 50% 50%;
+    margin-right: 13px;
+
+    @include media("max", "xs") {
+
+    }
   }
 }
 
@@ -1354,6 +1401,7 @@ input[type=file]:focus + .form__file-label {
 // FILES
 
 @import '../styles/components/contact.scss';
+@import '../styles/components/product.scss';
 @import 'components/main';
 @import 'components/logo';
 

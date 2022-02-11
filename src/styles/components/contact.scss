@@ -11,31 +11,33 @@ body {
   }
 }
 
-.header {
-  width: auto;
-  margin-right: 121px;
-  img {
-    width: 216px;
-    padding-left: 31px;
-  }
-
-  @include media("max", "md") {
-    margin-left: 60px;
-  }
-
-  @include media("max", "xm") {
-    margin-left: 30px;
-    margin-right: 30px;
-  }
-
-  .header__wrapper {
-    display: flex;
-    align-items: center;
-  }
-
-  img {
-    @include media("max", "sm") {
-      display: none;
+.contact-page {
+  .header {
+    width: auto;
+    margin-right: 121px;
+    img {
+      width: 216px;
+      padding-left: 31px;
+    }
+  
+    @include media("max", "md") {
+      margin-left: 60px;
+    }
+  
+    @include media("max", "xm") {
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+  
+    .header__wrapper {
+      display: flex;
+      align-items: center;
+    }
+  
+    img {
+      @include media("max", "sm") {
+        display: none;
+      }
     }
   }
 }
@@ -136,16 +138,21 @@ body {
   margin: 26px 0;
 }
 
-.form {
-  
-}
-
 .form__data-contact-file-label {
   @include media("max", "lg") {
     order: 1;
   }
   @include media("max", "md") {
     
+  }
+}
+
+.form__wrapper {
+  &-contact {
+    @include media("max", "xl") {
+      flex-direction: column;
+      max-width: 712px;
+    }
   }
 }
 
@@ -245,12 +252,7 @@ body {
 }
 
 .form__succes-label {
-
-
   span {
-    padding-left: 20px;
-    // display: inherit;
-
     @include media("max", "md") {
     
     }
