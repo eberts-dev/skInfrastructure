@@ -346,3 +346,64 @@
     display: none;
   }
 }
+
+.popup__overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: $main-overlay;
+  opacity: 0;
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+    transition: 0.3s all;
+  }
+}
+
+.popup__window {
+  position: absolute;
+  width: 650px;
+  height: 550px;
+  top: 33%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background: $background-black;
+  z-index: 99;
+  transform: translate(-50%, -50%) scale(0);
+
+  &.active {
+    transform: translate(0%, -20%) scale(1);
+    transition: 0.3s all;
+  }
+}
+
+.popup__info {
+  padding: 10px 107px 84px 94px;
+}
+
+.popup__list {
+  &-item {
+    font-size: 20px;
+    padding-bottom: 27px;
+    color: $white;
+  }
+}
+
+.popup__details-name {
+  font-family: 'Gilam-Bold';
+  display: block;
+  line-height: 42px;
+}
+
+.popup__details-value {
+  font-family: 'Gilam-Book';
+}
+
+.pupup__close {
+  display: flex;
+  justify-content: flex-end;
+  padding: 18px;
+}

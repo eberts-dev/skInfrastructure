@@ -31,6 +31,36 @@
     </header>
 
     <section>
+      <div class="popup__overlay">
+        <div class="popup__window">
+          <a href="#" class="pupup__close">
+            <svg width="50" height="50"><use xlink:href="#popup__Icon-1"></use></svg>
+          </a>
+          <div class="popup__info">
+            <ul class="popup__list">
+              <li class="popup__list-item">
+                <span class="popup__details-name">Заказчик:</span>
+                <span class="popup__details-value">ООО Главстрой СПБ</span>
+              </li>
+              <li class="popup__list-item">
+                <span class="popup__details-name">Адрес объекта:</span>
+                <span class="popup__details-value">Район Юнтолово Квартал 1 этап 2 корпуса 1,2,3,4</span>
+              </li>
+              <li class="popup__list-item">
+                <span class="popup__details-name">Наименование работ:</span>
+                <span class="popup__details-value">Устройство прифундаментного дренажа</span>
+              </li>
+              <li class="popup__list-item">
+                <span class="popup__details-name">Объем выполненных работ:</span>
+                <span class="popup__details-value">582 м.п.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
       <div class="product product-indent">
         <div class="product__wrapper product__wrapper-page">
           <div class="side side-product">
@@ -121,7 +151,6 @@
                 </div>
                 </a>
               </li>
-              <!-- ** -->
               <li class="product__list-item">
                 <a href="#" class="product__list-link">
                   <div class="product__company product__company-ready">
@@ -269,5 +298,12 @@
       </div>
     </footer>
 
+    <svg style="display: none;">
+      <symbol id="popup__Icon-1" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g>
+          <path d="M14.4062 13L13 14.4062L23.625 25L13 35.5938L14.4062 37L25.0625 26.4062L35.6875 37L37.0938 35.5938L26.4688 25L37.0938 14.4062L35.6875 13L25.0625 23.5938L14.4062 13Z" fill="#E4B564"/>
+        </g> 
+      </symbol>
+    </svg>
   </body>
 </html>
